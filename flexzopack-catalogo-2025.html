@@ -16,7 +16,7 @@
   --white:rgba(255,255,255,0.85);
   --white-dim:rgba(255,255,255,0.35);
 }
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%;}
 body{width:100%;max-width:100%;overflow-x:hidden;
   font-family:'Inter',sans-serif;
   background:var(--dark);
@@ -209,7 +209,7 @@ footer img{height:28px;opacity:0.6;}
   .hero-eyebrow{font-size:10px;}
   .hero-contact{flex-direction:column;gap:8px;}
   .hero-contact a{font-size:12px;}
-  section{padding:56px 20px;width:100%;box-sizing:border-box;}
+  section{padding:56px 20px;width:100%;box-sizing:border-box;max-width:100%;}
   .nosotros-grid{grid-template-columns:1fr;gap:32px;}
   .nosotros-text p{font-size:15px;}
   .stat-row{flex-direction:column;gap:2px;align-items:flex-start;padding:20px 0;}
@@ -263,6 +263,27 @@ footer img{height:28px;opacity:0.6;}
 .hero-anim{display:flex;align-items:center;gap:40px;}
 .hacol{display:flex;flex-direction:column;gap:24px;width:160px;}
 .hacol-l{align-items:flex-end;}.hacol-r{align-items:flex-start;}
+
+@media(max-width:480px){
+  *{max-width:100%;box-sizing:border-box;}
+  body,html{overflow-x:hidden;width:100%;}
+  .hero{padding:130px 20px 48px;}
+  .hero h1{font-size:30px;}
+  .hero-anim{transform:scale(0.55);transform-origin:center top;margin:0 auto;}
+  .nosotros-grid,.porque-grid,.about{grid-template-columns:1fr !important;}
+  .clientes-list{grid-template-columns:1fr !important;}
+  section{padding:48px 20px !important;}
+  .sec-label{font-size:9px;letter-spacing:2px;}
+  .title{font-size:18px !important;}
+  .stat-num{font-size:28px !important;}
+  .nosotros-text p{font-size:14px;}
+  .porque-item{padding:24px 16px !important;}
+  .about-l,.about-r{padding:48px 20px !important;}
+  .about-l{border-right:none !important;border-bottom:0.5px solid var(--border);}
+  nav{padding:14px 20px;}
+  .nav-links{display:none !important;}
+  .hero-contact{display:none;}
+}
 </style>
 </head>
 <body>
@@ -284,11 +305,7 @@ footer img{height:28px;opacity:0.6;}
   <div class="hero-left">
     <div class="hero-eyebrow">Flexible Packaging · Guatemala</div>
     <h1>Empaque flexible<br><em>para marcas</em><br>que importan.</h1>
-    <div class="hero-contact" id="contacto">
-      <a href="https://wa.me/50253649908">+502 5364-9908</a>
-      <a href="mailto:tfalla@flexzopack.com">tfalla@flexzopack.com</a>
-      <a href="#">10 Ave 16-09 Zona 10, Guatemala</a>
-    </div>
+    
   </div>
   <div class="hero-right">
     <div style="position:relative;">
